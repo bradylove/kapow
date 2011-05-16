@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		23E7B07F1380A13000527CA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B07E1380A13000527CA7 /* Cocoa.framework */; };
-		23E7B0811380A13000527CA7 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B0801380A13000527CA7 /* MacRuby.framework */; };
 		23E7B0881380A13000527CA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0861380A13000527CA7 /* InfoPlist.strings */; };
 		23E7B08B1380A13100527CA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E7B08A1380A13100527CA7 /* main.m */; };
 		23E7B08F1380A13100527CA7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B08D1380A13100527CA7 /* MainMenu.xib */; };
 		23E7B0921380A13100527CA7 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0911380A13100527CA7 /* rb_main.rb */; };
 		23E7B0941380A13100527CA7 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0931380A13100527CA7 /* AppDelegate.rb */; };
+		23E7B09E1380A49E00527CA7 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B09D1380A49E00527CA7 /* MacRuby.framework */; };
+		23E7B0A01380A4B000527CA7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B09F1380A4B000527CA7 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		23E7B07A1380A13000527CA7 /* KaPow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaPow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E7B07E1380A13000527CA7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		23E7B0801380A13000527CA7 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = System/Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
 		23E7B0851380A13000527CA7 /* KaPow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KaPow-Info.plist"; sourceTree = "<group>"; };
 		23E7B0871380A13000527CA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23E7B0891380A13100527CA7 /* KaPow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KaPow-Prefix.pch"; sourceTree = "<group>"; };
@@ -27,6 +27,8 @@
 		23E7B08E1380A13100527CA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		23E7B0911380A13100527CA7 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		23E7B0931380A13100527CA7 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		23E7B09D1380A49E00527CA7 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
+		23E7B09F1380A4B000527CA7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,8 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E7B0A01380A4B000527CA7 /* AppKit.framework in Frameworks */,
+				23E7B09E1380A49E00527CA7 /* MacRuby.framework in Frameworks */,
 				23E7B07F1380A13000527CA7 /* Cocoa.framework in Frameworks */,
-				23E7B0811380A13000527CA7 /* MacRuby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,8 @@
 		23E7B06F1380A13000527CA7 = {
 			isa = PBXGroup;
 			children = (
+				23E7B09F1380A4B000527CA7 /* AppKit.framework */,
+				23E7B09D1380A49E00527CA7 /* MacRuby.framework */,
 				23E7B0831380A13000527CA7 /* KaPow */,
 				23E7B07D1380A13000527CA7 /* Frameworks */,
 				23E7B07B1380A13000527CA7 /* Products */,
@@ -63,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				23E7B07E1380A13000527CA7 /* Cocoa.framework */,
-				23E7B0801380A13000527CA7 /* MacRuby.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
