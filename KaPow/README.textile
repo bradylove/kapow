@@ -1,0 +1,18 @@
+h1. KaPow Version .10(alpha1)
+
+KaPow is a MacRuby application for managing your symlinks that Pow uses you run your rails apps. "Pow is a zero-config Rack server for Mac OS X. Have it serving your apps locally in under a minute."
+
+Pow must be installed for KaPow to work.
+
+You can install Pow with the following command in your terminal.
+
+<pre>
+<code>
+$ curl get.pow.cx | sh
+</code>
+</pre>
+
+Once you have done that you can use KaPow to setup the apps that you would like Pow to serve.
+
+You can get more information about Pow at http://pow.cx
+

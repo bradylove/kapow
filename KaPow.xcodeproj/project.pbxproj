@@ -20,9 +20,9 @@
 		23E7B07A1380A13000527CA7 /* KaPow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaPow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E7B07E1380A13000527CA7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		23E7B0801380A13000527CA7 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = System/Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
-		23E7B0851380A13000527CA7 /* KaPow-Info.plist */ = {isa = PBXFileReference; path = "KaPow-Info.plist"; sourceTree = "<group>"; };
+		23E7B0851380A13000527CA7 /* KaPow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KaPow-Info.plist"; sourceTree = "<group>"; };
 		23E7B0871380A13000527CA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		23E7B0891380A13100527CA7 /* KaPow-Prefix.pch */ = {isa = PBXFileReference; path = "KaPow-Prefix.pch"; sourceTree = "<group>"; };
+		23E7B0891380A13100527CA7 /* KaPow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KaPow-Prefix.pch"; sourceTree = "<group>"; };
 		23E7B08A1380A13100527CA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		23E7B08E1380A13100527CA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		23E7B0911380A13100527CA7 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
