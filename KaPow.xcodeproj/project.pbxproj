@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23E7B07F1380A13000527CA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B07E1380A13000527CA7 /* Cocoa.framework */; };
+		23E7B0811380A13000527CA7 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B0801380A13000527CA7 /* MacRuby.framework */; };
+		23E7B0881380A13000527CA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0861380A13000527CA7 /* InfoPlist.strings */; };
+		23E7B08B1380A13100527CA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E7B08A1380A13100527CA7 /* main.m */; };
+		23E7B08F1380A13100527CA7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B08D1380A13100527CA7 /* MainMenu.xib */; };
+		23E7B0921380A13100527CA7 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0911380A13100527CA7 /* rb_main.rb */; };
+		23E7B0941380A13100527CA7 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0931380A13100527CA7 /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		23E7B07A1380A13000527CA7 /* KaPow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaPow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23E7B07E1380A13000527CA7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		23E7B0801380A13000527CA7 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = System/Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
+		23E7B0851380A13000527CA7 /* KaPow-Info.plist */ = {isa = PBXFileReference; path = "KaPow-Info.plist"; sourceTree = "<group>"; };
+		23E7B0871380A13000527CA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		23E7B0891380A13100527CA7 /* KaPow-Prefix.pch */ = {isa = PBXFileReference; path = "KaPow-Prefix.pch"; sourceTree = "<group>"; };
+		23E7B08A1380A13100527CA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23E7B08E1380A13100527CA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		23E7B0911380A13100527CA7 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		23E7B0931380A13100527CA7 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23E7B0771380A13000527CA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23E7B07F1380A13000527CA7 /* Cocoa.framework in Frameworks */,
+				23E7B0811380A13000527CA7 /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23E7B06F1380A13000527CA7 = {
+			isa = PBXGroup;
+			children = (
+				23E7B0831380A13000527CA7 /* KaPow */,
+				23E7B07D1380A13000527CA7 /* Frameworks */,
+				23E7B07B1380A13000527CA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23E7B07B1380A13000527CA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23E7B07A1380A13000527CA7 /* KaPow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23E7B07D1380A13000527CA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23E7B07E1380A13000527CA7 /* Cocoa.framework */,
+				23E7B0801380A13000527CA7 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23E7B0831380A13000527CA7 /* KaPow */ = {
+			isa = PBXGroup;
+			children = (
+				23E7B0931380A13100527CA7 /* AppDelegate.rb */,
+				23E7B08C1380A13100527CA7 /* Resources */,
+				23E7B0901380A13100527CA7 /* Other Sources */,
+				23E7B0841380A13000527CA7 /* Supporting Files */,
+			);
+			path = KaPow;
+			sourceTree = "<group>";
+		};
+		23E7B0841380A13000527CA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23E7B0851380A13000527CA7 /* KaPow-Info.plist */,
+				23E7B0861380A13000527CA7 /* InfoPlist.strings */,
+				23E7B0891380A13100527CA7 /* KaPow-Prefix.pch */,
+				23E7B08A1380A13100527CA7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23E7B08C1380A13100527CA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23E7B08D1380A13100527CA7 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		23E7B0901380A13100527CA7 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				23E7B0911380A13100527CA7 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		23E7B0821380A13000527CA7 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 23E7B09A1380A13100527CA7 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		23E7B0791380A13000527CA7 /* KaPow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23E7B0971380A13100527CA7 /* Build configuration list for PBXNativeTarget "KaPow" */;
+			buildPhases = (
+				23E7B0761380A13000527CA7 /* Sources */,
+				23E7B0771380A13000527CA7 /* Frameworks */,
+				23E7B0781380A13000527CA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KaPow;
+			productName = KaPow;
+			productReference = 23E7B07A1380A13000527CA7 /* KaPow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23E7B0711380A13000527CA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = None;
+			};
+			buildConfigurationList = 23E7B0741380A13000527CA7 /* Build configuration list for PBXProject "KaPow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 23E7B06F1380A13000527CA7;
+			productRefGroup = 23E7B07B1380A13000527CA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23E7B0791380A13000527CA7 /* KaPow */,
+				23E7B0821380A13000527CA7 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23E7B0781380A13000527CA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23E7B0881380A13000527CA7 /* InfoPlist.strings in Resources */,
+				23E7B08F1380A13100527CA7 /* MainMenu.xib in Resources */,
+				23E7B0921380A13100527CA7 /* rb_main.rb in Resources */,
+				23E7B0941380A13100527CA7 /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23E7B0761380A13000527CA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23E7B08B1380A13100527CA7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		23E7B0861380A13000527CA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23E7B0871380A13000527CA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		23E7B08D1380A13100527CA7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23E7B08E1380A13100527CA7 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23E7B0951380A13100527CA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		23E7B0961380A13100527CA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		23E7B0981380A13100527CA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KaPow/KaPow-Prefix.pch";
+				INFOPLIST_FILE = "KaPow/KaPow-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		23E7B0991380A13100527CA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KaPow/KaPow-Prefix.pch";
+				INFOPLIST_FILE = "KaPow/KaPow-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		23E7B09B1380A13100527CA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		23E7B09C1380A13100527CA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23E7B0741380A13000527CA7 /* Build configuration list for PBXProject "KaPow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23E7B0951380A13100527CA7 /* Debug */,
+				23E7B0961380A13100527CA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23E7B0971380A13100527CA7 /* Build configuration list for PBXNativeTarget "KaPow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23E7B0981380A13100527CA7 /* Debug */,
+				23E7B0991380A13100527CA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		23E7B09A1380A13100527CA7 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23E7B09B1380A13100527CA7 /* Debug */,
+				23E7B09C1380A13100527CA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23E7B0711380A13000527CA7 /* Project object */;
+}
