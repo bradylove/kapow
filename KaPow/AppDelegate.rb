@@ -6,7 +6,6 @@
 #  Copyright 2011 None. All rights reserved.
 #
 require 'FileUtils'
-require 'StatusBar'
 
 class AppDelegate
   attr_accessor :window
@@ -14,13 +13,11 @@ class AppDelegate
   attr_accessor :appNameField
   attr_accessor :appPathField
   attr_accessor :appListTableView
-  attr_accessor :status_bar
 
   POWDIR = File.expand_path '~/.pow/'
 
   def applicationDidFinishLaunching(a_notification)
     @link_control = LinkControl.new
-    # @status_bar = StatusBar.new
 
     self.get_current_apps
   end
@@ -72,7 +69,9 @@ class AppDelegate
 
   def create_symlink(target, name)
     link_path = POWDIR + "/" + name
-    unless @link_control.exists?(link_path)
+    if @link_control.exists?(link_path)
+      self.show_error("#{name} already exists.", "Please enter a different name.")
+    else
       FileUtils.ln_sf target, link_path
 
       new_app = Apps.new
@@ -84,8 +83,7 @@ class AppDelegate
       @appListTableView.reloadData
 
       self.clear_fields
-    else
-      # Popup window notifying that app w/ that name already exists
+
     end
   end
 
@@ -120,6 +118,14 @@ class AppDelegate
 
   def go_to_app(sender)
    system("open", @urlButton.title) unless @urlButton.title == ""
+  end
+
+  def show_error(error, error_correction)
+    alert = NSAlert.alertWithMessageText(error, defaultButton: "OK",
+                                         alternateButton: nil,
+                                         otherButton: nil,
+                                         informativeTextWithFormat: error_correction)
+    alert.runModal
   end
 
   def clear_fields
