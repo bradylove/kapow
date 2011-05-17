@@ -1,4 +1,4 @@
-h1. KaPow Version .10(alpha1)
+h1. KaPow Version .10(alpha2)
 
 KaPow is a MacRuby application for managing your symlinks that Pow uses you run your rails apps. "Pow is a zero-config Rack server for Mac OS X. Have it serving your apps locally in under a minute."
 
