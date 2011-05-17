@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23D82A811382C40700A765C5 /* LinkControl.rb in Resources */ = {isa = PBXBuildFile; fileRef = 23D82A801382C40700A765C5 /* LinkControl.rb */; };
 		23E7B07F1380A13000527CA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B07E1380A13000527CA7 /* Cocoa.framework */; };
 		23E7B0881380A13000527CA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0861380A13000527CA7 /* InfoPlist.strings */; };
 		23E7B08B1380A13100527CA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E7B08A1380A13100527CA7 /* main.m */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23D82A801382C40700A765C5 /* LinkControl.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = LinkControl.rb; sourceTree = "<group>"; };
 		23E7B07A1380A13000527CA7 /* KaPow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaPow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E7B07E1380A13000527CA7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		23E7B0851380A13000527CA7 /* KaPow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KaPow-Info.plist"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				23E7B08C1380A13100527CA7 /* Resources */,
 				23E7B0901380A13100527CA7 /* Other Sources */,
 				23E7B0841380A13000527CA7 /* Supporting Files */,
+				23D82A801382C40700A765C5 /* LinkControl.rb */,
 			);
 			path = KaPow;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				23E7B08F1380A13100527CA7 /* MainMenu.xib in Resources */,
 				23E7B0921380A13100527CA7 /* rb_main.rb in Resources */,
 				23E7B0941380A13100527CA7 /* AppDelegate.rb in Resources */,
+				23D82A811382C40700A765C5 /* LinkControl.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +316,7 @@
 				23E7B0991380A13100527CA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23E7B09A1380A13100527CA7 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -320,6 +325,7 @@
 				23E7B09C1380A13100527CA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

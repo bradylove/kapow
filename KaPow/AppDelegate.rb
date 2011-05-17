@@ -9,14 +9,16 @@ require 'FileUtils'
 
 class AppDelegate
   attr_accessor :window
-  attr_accessor :browseButton
+  attr_accessor :browseButton, :saveButton, :urlButton
   attr_accessor :appNameField
   attr_accessor :appPathField
   attr_accessor :appListTableView
-  attr_accessor :urlButton
+  
+  POWDIR = File.expand_path '~/.pow/'
 
   def applicationDidFinishLaunching(a_notification)
-    @base_dir = File.expand_path '~/.pow/'
+    @link_control = LinkControl.new
+
     self.get_current_apps
   end  
   
@@ -32,16 +34,17 @@ class AppDelegate
   end
 
   def get_current_apps
-    files_paths = []
-    files_names = []
+    Dir[POWDIR + '/*'].each do |f|
+      if @link_control.is_symlink?(f)
+        new_app = Apps.new
+        new_app.name = File.basename(f.to_s)
+        new_app.link = f
+        new_app.target = File.readlink(f)
 
-    Dir[@base_dir + '/*'].each do |f|
-      new_app = Apps.new
-      new_app.app_name = File.basename(f.to_s)
-      new_app.symlink_path = f
-      new_app.destination_path = File.readlink(f)
-
-      @apps << new_app
+        @apps << new_app
+      else
+        #do nothing
+      end
     end
 
     @appListTableView.reloadData
@@ -59,27 +62,28 @@ class AppDelegate
   def tableView(view, objectValueForTableColumn:column, row:index)
     apps = @apps[index]
     case column.identifier
-      when 'app_name'
-        apps.app_name
-      when 'symlink_path'
-        apps.symlink_path
+      when 'name'
+        apps.name
     end
   end
 
-  def create_symlink(destination, name)
-    link_path = @base_dir + "/" + name
-    FileUtils.ln_sf destination, link_path
-    
-    new_app = Apps.new
-    new_app.app_name = name
-    new_app.symlink_path = link_path
-    new_app.destination_path = destination
+  def create_symlink(target, name)
+    link_path = POWDIR + "/" + name
+    unless @link_control.exists?(link_path)
+      FileUtils.ln_sf target, link_path
 
-    @apps << new_app
-    @appListTableView.reloadData
+      new_app = Apps.new
+      new_app.name = name
+      new_app.link = link_path
+      new_app.target = target
 
-    @appPathField.stringValue = ""
-    @appNameField.stringValue = ""
+      @apps << new_app
+      @appListTableView.reloadData
+
+      self.clear_fields
+    else
+      # Popup window notifying that app w/ that name already exists
+    end
   end
 
   def add_app(sender)
@@ -87,7 +91,7 @@ class AppDelegate
   end
 
   def delete_symlink(index)
-    link_path = @apps[index].symlink_path
+    link_path = @apps[index].link
 
     FileUtils.rm_r link_path, :force => true
     @apps.delete_at(index)
@@ -104,9 +108,11 @@ class AppDelegate
   def app_selection(sender)
     selected_app = @apps.at(@appListTableView.selectedRow)
 
-    @appPathField.stringValue = selected_app.destination_path
-    @appNameField.stringValue = selected_app.app_name
-    @urlButton.title = "http://#{selected_app.app_name}.dev"
+    @appPathField.stringValue = selected_app.target
+    @appNameField.stringValue = selected_app.name
+    @urlButton.title = "http://#{selected_app.name}.dev"
+
+    self.disable_fields
   end
 
   def go_to_app(sender)
@@ -122,10 +128,25 @@ class AppDelegate
   end
 
   def new_button(sender)
+    self.enable_fields
     self.clear_fields
+  end
+
+  def disable_fields
+    @appPathField.enabled = false
+    @appNameField.enabled = false
+    @browseButton.enabled = false
+    @saveButton.enabled   = false
+  end
+
+  def enable_fields
+    @appPathField.enabled = true
+    @appNameField.enabled = true
+    @browseButton.enabled = true
+    @saveButton.enabled   = true
   end
 end
 
 class Apps
-  attr_accessor :app_name, :symlink_path, :destination_path
+  attr_accessor :name, :target, :link
 end
