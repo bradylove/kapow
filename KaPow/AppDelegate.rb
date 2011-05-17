@@ -6,6 +6,7 @@
 #  Copyright 2011 None. All rights reserved.
 #
 require 'FileUtils'
+require 'StatusBar'
 
 class AppDelegate
   attr_accessor :window
@@ -13,15 +14,17 @@ class AppDelegate
   attr_accessor :appNameField
   attr_accessor :appPathField
   attr_accessor :appListTableView
-  
+  attr_accessor :status_bar
+
   POWDIR = File.expand_path '~/.pow/'
 
   def applicationDidFinishLaunching(a_notification)
     @link_control = LinkControl.new
+    # @status_bar = StatusBar.new
 
     self.get_current_apps
-  end  
-  
+  end
+
   def browse(sender)
     dialog = NSOpenPanel.openPanel
     dialog.canChooseFiles = false

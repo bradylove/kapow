@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235F3D8F1382D396000A90A4 /* StatusBar.rb in Resources */ = {isa = PBXBuildFile; fileRef = 235F3D8E1382D396000A90A4 /* StatusBar.rb */; };
+		235F3D921382D468000A90A4 /* StatusBar.rb in Resources */ = {isa = PBXBuildFile; fileRef = 235F3D911382D468000A90A4 /* StatusBar.rb */; };
+		235F3D981382D63B000A90A4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 235F3D971382D63B000A90A4 /* icon.png */; };
 		23D82A811382C40700A765C5 /* LinkControl.rb in Resources */ = {isa = PBXBuildFile; fileRef = 23D82A801382C40700A765C5 /* LinkControl.rb */; };
 		23E7B07F1380A13000527CA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B07E1380A13000527CA7 /* Cocoa.framework */; };
 		23E7B0881380A13000527CA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0861380A13000527CA7 /* InfoPlist.strings */; };
@@ -16,9 +19,13 @@
 		23E7B0941380A13100527CA7 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0931380A13100527CA7 /* AppDelegate.rb */; };
 		23E7B09E1380A49E00527CA7 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B09D1380A49E00527CA7 /* MacRuby.framework */; };
 		23E7B0A01380A4B000527CA7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B09F1380A4B000527CA7 /* AppKit.framework */; };
+		23EC80F013831BD300E82720 /* system-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23EC80EF13831BD300E82720 /* system-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		235F3D8E1382D396000A90A4 /* StatusBar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = StatusBar.rb; sourceTree = "<group>"; };
+		235F3D911382D468000A90A4 /* StatusBar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = StatusBar.rb; sourceTree = "<group>"; };
+		235F3D971382D63B000A90A4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		23D82A801382C40700A765C5 /* LinkControl.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = LinkControl.rb; sourceTree = "<group>"; };
 		23E7B07A1380A13000527CA7 /* KaPow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaPow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E7B07E1380A13000527CA7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -31,6 +38,7 @@
 		23E7B0931380A13100527CA7 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		23E7B09D1380A49E00527CA7 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
 		23E7B09F1380A4B000527CA7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		23EC80EF13831BD300E82720 /* system-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "system-icon.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,8 @@
 		23E7B06F1380A13000527CA7 = {
 			isa = PBXGroup;
 			children = (
+				235F3D971382D63B000A90A4 /* icon.png */,
+				235F3D8E1382D396000A90A4 /* StatusBar.rb */,
 				23E7B09F1380A4B000527CA7 /* AppKit.framework */,
 				23E7B09D1380A49E00527CA7 /* MacRuby.framework */,
 				23E7B0831380A13000527CA7 /* KaPow */,
@@ -77,11 +87,13 @@
 		23E7B0831380A13000527CA7 /* KaPow */ = {
 			isa = PBXGroup;
 			children = (
+				23EC80EF13831BD300E82720 /* system-icon.png */,
 				23E7B0931380A13100527CA7 /* AppDelegate.rb */,
 				23E7B08C1380A13100527CA7 /* Resources */,
 				23E7B0901380A13100527CA7 /* Other Sources */,
 				23E7B0841380A13000527CA7 /* Supporting Files */,
 				23D82A801382C40700A765C5 /* LinkControl.rb */,
+				235F3D911382D468000A90A4 /* StatusBar.rb */,
 			);
 			path = KaPow;
 			sourceTree = "<group>";
@@ -185,6 +197,10 @@
 				23E7B0921380A13100527CA7 /* rb_main.rb in Resources */,
 				23E7B0941380A13100527CA7 /* AppDelegate.rb in Resources */,
 				23D82A811382C40700A765C5 /* LinkControl.rb in Resources */,
+				235F3D8F1382D396000A90A4 /* StatusBar.rb in Resources */,
+				235F3D921382D468000A90A4 /* StatusBar.rb in Resources */,
+				235F3D981382D63B000A90A4 /* icon.png in Resources */,
+				23EC80F013831BD300E82720 /* system-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
