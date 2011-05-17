@@ -71,7 +71,7 @@ class AppDelegate
     link_path = POWDIR + "/" + name
     if @link_control.exists?(link_path)
       self.show_error("#{name} already exists.", "Please enter a different name.")
-    else
+    elsif @link_control.exists?(target)
       FileUtils.ln_sf target, link_path
 
       new_app = Apps.new
@@ -83,7 +83,8 @@ class AppDelegate
       @appListTableView.reloadData
 
       self.clear_fields
-
+    else
+      self.show_error("#{target} does not exist.", "Please verify that the path is correct and exists")
     end
   end
 

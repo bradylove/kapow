@@ -16,4 +16,5 @@ class LinkControl < AppDelegate
   def exists?(f)
     File.exists?(f)
   end
+
 end
