@@ -14,6 +14,8 @@ $ curl get.pow.cx | sh
 
 Once you have done that you can use KaPow to setup the apps that you would like Pow to serve.
 
+To use KaPow download the latest .zip file from the Downloads section and unzip it. Then just drag KaPow.app to your applications folder and you are good to go.
+
 You can get more information about Pow at http://pow.cx
 
 h2. MIT License
