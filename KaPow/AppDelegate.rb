@@ -9,9 +9,9 @@ require 'FileUtils'
 
 class AppDelegate
   attr_accessor :window
-  attr_accessor :browseButton, :saveButton, :urlButton
-  attr_accessor :appNameField
-  attr_accessor :appPathField
+  attr_accessor :browseButton, :saveButton, :urlButton, :restartButton
+  attr_accessor :alwaysRestartCheckbox
+  attr_accessor :appNameField, :appPathField
   attr_accessor :appListTableView
 
   POWDIR = File.expand_path '~/.pow/'
@@ -20,6 +20,7 @@ class AppDelegate
     @link_control = LinkControl.new
 
     self.get_current_apps
+    self.enable_fields
   end
 
   def browse(sender)
@@ -114,6 +115,12 @@ class AppDelegate
     @appNameField.stringValue = selected_app.name
     @urlButton.title = "http://#{selected_app.name}.dev"
 
+    if @link_control.exists?(selected_app.target + "/tmp/always_restart.txt")
+      @alwaysRestartCheckbox.state = 1
+    else
+      @alwaysRestartCheckbox.state = 0
+    end
+
     self.disable_fields
   end
 
@@ -147,6 +154,9 @@ class AppDelegate
     @appNameField.enabled = false
     @browseButton.enabled = false
     @saveButton.enabled   = false
+
+    @restartButton.enabled         = true
+    @alwaysRestartCheckbox.enabled = true
   end
 
   def enable_fields
@@ -154,6 +164,26 @@ class AppDelegate
     @appNameField.enabled = true
     @browseButton.enabled = true
     @saveButton.enabled   = true
+
+    @restartButton.enabled         = false
+    @alwaysRestartCheckbox.enabled = false
+  end
+
+  def restart_server(sender)
+    f = @apps.at(@appListTableView.selectedRow).target
+
+    @link_control.restart(f)
+  end
+
+  def always_restart_control(sender)
+    f = @apps.at(@appListTableView.selectedRow).target
+
+
+    if @alwaysRestartCheckbox.state == 1
+      @link_control.make_always_restart(f)
+    else
+      @link_control.remove_always_restart(f)
+    end
   end
 end
 

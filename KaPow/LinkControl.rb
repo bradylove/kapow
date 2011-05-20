@@ -17,4 +17,29 @@ class LinkControl < AppDelegate
     File.exists?(f)
   end
 
+  def restart(f)
+    folder = f + "/tmp"
+
+    if !exists?(folder)
+      FileUtils.mkdir(folder)
+    end
+
+    FileUtils.touch(folder + "/restart.txt")
+  end
+
+  def make_always_restart(f)
+    folder = f + "/tmp"
+
+    if !exists?(folder)
+      FileUtils.mkdir(folder)
+    end
+
+    FileUtils.touch(folder + "/always_restart.txt")
+  end
+
+  def remove_always_restart(f)
+    if self.exists?(f + "/tmp/always_restart.txt")
+      FileUtils.rm(f + "/tmp/always_restart.txt")
+    end
+  end
 end
