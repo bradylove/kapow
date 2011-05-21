@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		235F3D8F1382D396000A90A4 /* StatusBar.rb in Resources */ = {isa = PBXBuildFile; fileRef = 235F3D8E1382D396000A90A4 /* StatusBar.rb */; };
 		235F3D981382D63B000A90A4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 235F3D971382D63B000A90A4 /* icon.png */; };
 		23D82A811382C40700A765C5 /* LinkControl.rb in Resources */ = {isa = PBXBuildFile; fileRef = 23D82A801382C40700A765C5 /* LinkControl.rb */; };
 		23E7B07F1380A13000527CA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B07E1380A13000527CA7 /* Cocoa.framework */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		235F3D8E1382D396000A90A4 /* StatusBar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = StatusBar.rb; sourceTree = "<group>"; };
 		235F3D971382D63B000A90A4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		23D82A801382C40700A765C5 /* LinkControl.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = LinkControl.rb; sourceTree = "<group>"; };
 		23E7B07A1380A13000527CA7 /* KaPow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaPow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				235F3D971382D63B000A90A4 /* icon.png */,
-				235F3D8E1382D396000A90A4 /* StatusBar.rb */,
 				23E7B09F1380A4B000527CA7 /* AppKit.framework */,
 				23E7B09D1380A49E00527CA7 /* MacRuby.framework */,
 				23E7B0831380A13000527CA7 /* KaPow */,
@@ -194,7 +191,6 @@
 				23E7B0921380A13100527CA7 /* rb_main.rb in Resources */,
 				23E7B0941380A13100527CA7 /* AppDelegate.rb in Resources */,
 				23D82A811382C40700A765C5 /* LinkControl.rb in Resources */,
-				235F3D8F1382D396000A90A4 /* StatusBar.rb in Resources */,
 				235F3D981382D63B000A90A4 /* icon.png in Resources */,
 				23EC80F013831BD300E82720 /* system-icon.png in Resources */,
 			);
