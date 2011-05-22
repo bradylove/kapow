@@ -18,7 +18,9 @@ class AppDelegate
 
   def applicationDidFinishLaunching(a_notification)
     @link_control = LinkControl.new
-
+    @status_bar = StatusBar.new
+    @status_bar.initStatusBar(@apps)
+    
     self.get_current_apps
     self.enable_fields
   end
@@ -49,6 +51,7 @@ class AppDelegate
     end
 
     @appListTableView.reloadData
+    @status_bar.setup_menu(@apps)
   end
 
   def numberOfRowsInTableView(view)
