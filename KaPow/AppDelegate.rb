@@ -85,6 +85,7 @@ class AppDelegate
 
       @apps << new_app
       @appListTableView.reloadData
+      @status_bar.setup_menu(@apps)
 
       self.clear_fields
     else
@@ -127,8 +128,12 @@ class AppDelegate
     self.disable_fields
   end
 
-  def go_to_app(sender)
-   system("open", @urlButton.title) unless @urlButton.title == ""
+  def go_to_app(url)
+   system("open", url) 
+  end
+
+  def url_button_click(sender)
+    go_to_app(@urlButton.title) unless @urlButton.title == ""
   end
 
   def show_error(error, error_correction)

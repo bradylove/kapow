@@ -5,7 +5,7 @@
 #  Created by Brady Love on 5/21/11.
 #  Copyright 2011 None. All rights reserved.
 #
-class StatusBar
+class StatusBar < AppDelegate
   attr_accessor :statusBarItem
   attr_accessor :statusBarMenu
   attr_accessor :openKaPowMenuItem
@@ -39,7 +39,7 @@ class StatusBar
         menu_item.setSubmenu(NSMenu.new.tap do |sub_menu|
           smi = NSMenuItem.new
           smi.title = 'Open in Browser'
-          smi.action = 'open_kapow:'
+          smi.action = 'go_to_app:'
           smi.target = self
           sub_menu.addItem smi
 
@@ -56,6 +56,15 @@ class StatusBar
     menu
 
     @statusBarItem.setMenu menu
+  end
+
+  def go_to_app(sender)
+    title = title_for_guid(sender.smi.title)
+    system("open", 'http://#{title}.dev')
+  end
+
+  def title_for_guild(guid)
+    @apps[index].name
   end
 
   def open_kapow(sender)
