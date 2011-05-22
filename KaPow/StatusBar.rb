@@ -11,6 +11,7 @@ class StatusBar < AppDelegate
   attr_accessor :openKaPowMenuItem
 
   def initStatusBar(apps)
+    @link_control = LinkControl.new
     status_bar = NSStatusBar.systemStatusBar
     @statusBarItem = status_bar.statusItemWithLength(NSVariableStatusItemLength)
     
@@ -40,12 +41,14 @@ class StatusBar < AppDelegate
           smi = NSMenuItem.new
           smi.title = 'Open in Browser'
           smi.action = 'go_to_app:'
+          smi.representedObject = app.name
           smi.target = self
           sub_menu.addItem smi
 
           smi = NSMenuItem.new
           smi.title = 'Restart App'
-          smi.action = 'open_kapow:'
+          smi.action = 'restart_server:'
+          smi.representedObject = app.target
           smi.target = self
           sub_menu.addItem smi
         end)
@@ -59,20 +62,17 @@ class StatusBar < AppDelegate
   end
 
   def go_to_app(sender)
-    title = title_for_guid(sender.smi.title)
-    system("open", 'http://#{title}.dev')
+    url = "http://" + sender.representedObject + ".dev"
+    system("open", url)
   end
 
-  def title_for_guild(guid)
-    @apps[index].name
+  def restart_server(sender)
+    @link_control.restart(sender.representedObject.to_s)
   end
 
   def open_kapow(sender)
 
   end
 
-  def update_menu(apps)
-
-  end
 end
 
