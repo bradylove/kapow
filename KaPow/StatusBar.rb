@@ -14,7 +14,6 @@ class StatusBar
     status_bar = NSStatusBar.systemStatusBar
     @statusBarItem = status_bar.statusItemWithLength(NSVariableStatusItemLength)
     
-    
     image = NSImage.imageNamed 'system-icon'
     @statusBarItem.setImage image
 
@@ -29,13 +28,29 @@ class StatusBar
     mi.action = 'open_kapow:'
     mi.target =  self
     menu.addItem mi
+
+    mi = NSMenuItem.separatorItem
+
+    menu.addItem mi
     
     apps.each do |app|
-      mi = NSMenuItem.new
-      mi.title = app.name
-      mi.action = 'open_kapow:'
-      mi.target = 'self'
-      menu.addItem mi
+      menu.addItem(NSMenuItem.new.tap do |menu_item|
+        menu_item.title = app.name
+        menu_item.setSubmenu(NSMenu.new.tap do |sub_menu|
+          smi = NSMenuItem.new
+          smi.title = 'Open in Browser'
+          smi.action = 'open_kapow:'
+          smi.target = self
+          sub_menu.addItem smi
+
+          smi = NSMenuItem.new
+          smi.title = 'Restart App'
+          smi.action = 'open_kapow:'
+          smi.target = self
+          sub_menu.addItem smi
+        end)
+      end)
+
     end
 
     menu
