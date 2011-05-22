@@ -71,7 +71,6 @@ class StatusBar < AppDelegate
   end
 
   def open_kapow(sender)
-
   end
 
 end
