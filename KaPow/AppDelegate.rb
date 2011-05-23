@@ -8,7 +8,7 @@
 require 'FileUtils'
 
 class AppDelegate
-  attr_accessor :window, :windowFrame
+  attr_accessor :window
   attr_accessor :browseButton, :saveButton, :urlButton, :restartButton
   attr_accessor :alwaysRestartCheckbox
   attr_accessor :appNameField, :appPathField

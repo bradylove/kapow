@@ -6,7 +6,6 @@
 #  Copyright 2011 None. All rights reserved.
 #
 class StatusBar < AppDelegate
-  attr_accessor :window
   attr_accessor :statusBarItem
   attr_accessor :statusBarMenu
   attr_accessor :openKaPowMenuItem
@@ -67,12 +66,11 @@ class StatusBar < AppDelegate
     system("open", url)
   end
 
-  def open_kapow(sender)
-    @window.isVisible = true
-  end
-
   def restart_server(sender)
     @link_control.restart(sender.representedObject.to_s)
+  end
+
+  def open_kapow(sender)
   end
 
 end
