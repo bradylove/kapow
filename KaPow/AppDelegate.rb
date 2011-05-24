@@ -18,7 +18,7 @@ class AppDelegate
   POWDIR = File.expand_path '~/.pow/'
 
   def applicationDidFinishLaunching(a_notification)
-    # @window.isExcludedFromWindowsMenu = false
+    @window.isVisible = false
     @link_control = LinkControl.new
     self.initStatusBar
     
@@ -248,7 +248,15 @@ class AppDelegate
 
     end
 
-    menu
+    mi = NSMenuItem.separatorItem
+
+    menu.addItem mi
+
+    mi = NSMenuItem.new
+    mi.title = 'Quit KaPow'
+    mi.action = 'quit_kapow:'
+    mi.target =  self
+    menu.addItem mi
 
     @statusBarItem.setMenu menu
   end
@@ -264,6 +272,11 @@ class AppDelegate
   def open_kapow(sender)
     @window.orderFrontRegardless
     @window.isVisible = true
+  end
+
+  def quit_kapow(sender)
+    app = NSApplication.sharedApplication
+    app.terminate(self)
   end
 end
 
