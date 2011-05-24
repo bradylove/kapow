@@ -25,7 +25,7 @@
 	<key>CFBundleURLTypes</key>
 	<array/>
 	<key>CFBundleVersion</key>
-	<string>alpha3</string>
+	<string>alpha4</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.developer-tools</string>
 	<key>LSMinimumSystemVersion</key>
@@ -39,6 +39,8 @@
 	<key>UTExportedTypeDeclarations</key>
 	<array/>
 	<key>UTImportedTypeDeclarations</key>
-	<array/>
+  <array/>
+  <key>LSUIElement</key>
+  <true/>
 </dict>
 </plist>

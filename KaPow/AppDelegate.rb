@@ -18,8 +18,7 @@ class AppDelegate
   POWDIR = File.expand_path '~/.pow/'
 
   def applicationDidFinishLaunching(a_notification)
-    # self.menuBarVisible = false
-
+    # @window.isExcludedFromWindowsMenu = false
     @link_control = LinkControl.new
     self.initStatusBar
     
@@ -263,6 +262,7 @@ class AppDelegate
   end
 
   def open_kapow(sender)
+    @window.orderFrontRegardless
     @window.isVisible = true
   end
 end

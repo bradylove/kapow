@@ -61,7 +61,9 @@
 				23E7B07D1380A13000527CA7 /* Frameworks */,
 				23E7B07B1380A13000527CA7 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		23E7B07B1380A13000527CA7 /* Products */ = {
 			isa = PBXGroup;
