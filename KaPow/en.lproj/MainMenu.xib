@@ -12,6 +12,7 @@
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<string>NSUserDefaultsController</string>
 			<string>NSScroller</string>
 			<string>NSTableHeaderView</string>
 			<string>NSMenuItem</string>
@@ -898,6 +899,9 @@
 			<object class="NSCustomObject" id="976324537">
 				<string key="NSClassName">AppDelegate</string>
 			</object>
+			<object class="NSUserDefaultsController" id="695590291">
+				<bool key="NSSharedInstance">YES</bool>
+			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
@@ -1160,14 +1164,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">restart_server:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="927141831"/>
-					</object>
-					<int key="connectionID">599</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">always_restart_control:</string>
 						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="29013098"/>
@@ -1181,6 +1177,22 @@
 						<reference key="destination" ref="55222174"/>
 					</object>
 					<int key="connectionID">602</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">restart_server:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="927141831"/>
+					</object>
+					<int key="connectionID">610</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">mainMenu</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="649796088"/>
+					</object>
+					<int key="connectionID">611</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1222,6 +1234,7 @@
 							<reference ref="448692316"/>
 						</object>
 						<reference key="parent" ref="0"/>
+						<string key="objectName">Main Menu</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
@@ -1484,11 +1497,6 @@
 						<reference key="parent" ref="992780483"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">494</int>
-						<reference key="object" ref="976324537"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">533</int>
 						<reference key="object" ref="512802121"/>
 						<object class="NSMutableArray" key="children">
@@ -1715,6 +1723,16 @@
 						<reference key="object" ref="507375249"/>
 						<reference key="parent" ref="29013098"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">494</int>
+						<reference key="object" ref="976324537"/>
+						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">604</int>
+						<reference key="object" ref="695590291"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1831,6 +1849,7 @@
 					<string>595.IBAttributePlaceholdersKey</string>
 					<string>595.IBPluginDependency</string>
 					<string>596.IBPluginDependency</string>
+					<string>604.IBPluginDependency</string>
 					<string>73.IBPluginDependency</string>
 					<string>73.ImportedFromIB2</string>
 					<string>74.IBPluginDependency</string>
@@ -1975,6 +1994,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
@@ -2004,7 +2024,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">602</int>
+			<int key="maxID">611</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2021,12 +2041,18 @@
 							<string>app_selection:</string>
 							<string>browse:</string>
 							<string>delete_button:</string>
+							<string>go_to_app_click:</string>
 							<string>new_button:</string>
+							<string>open_kapow:</string>
 							<string>restart_server:</string>
+							<string>restart_server_from_menu:</string>
 							<string>url_button_click:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2046,8 +2072,11 @@
 							<string>app_selection:</string>
 							<string>browse:</string>
 							<string>delete_button:</string>
+							<string>go_to_app_click:</string>
 							<string>new_button:</string>
+							<string>open_kapow:</string>
 							<string>restart_server:</string>
+							<string>restart_server_from_menu:</string>
 							<string>url_button_click:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -2073,11 +2102,23 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">go_to_app_click:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">new_button:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">open_kapow:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">restart_server:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">restart_server_from_menu:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -2095,6 +2136,7 @@
 							<string>appNameField</string>
 							<string>appPathField</string>
 							<string>browseButton</string>
+							<string>mainMenu</string>
 							<string>restartButton</string>
 							<string>saveButton</string>
 							<string>urlButton</string>
@@ -2102,6 +2144,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2122,6 +2165,7 @@
 							<string>appNameField</string>
 							<string>appPathField</string>
 							<string>browseButton</string>
+							<string>mainMenu</string>
 							<string>restartButton</string>
 							<string>saveButton</string>
 							<string>urlButton</string>
@@ -2147,6 +2191,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">browseButton</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">mainMenu</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">

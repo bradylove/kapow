@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		235F3D981382D63B000A90A4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 235F3D971382D63B000A90A4 /* icon.png */; };
-		2382587B13887A5B002D6B56 /* StatusBar.rb in Resources */ = {isa = PBXBuildFile; fileRef = 2382587A13887A5B002D6B56 /* StatusBar.rb */; };
 		23D82A811382C40700A765C5 /* LinkControl.rb in Resources */ = {isa = PBXBuildFile; fileRef = 23D82A801382C40700A765C5 /* LinkControl.rb */; };
 		23E7B07F1380A13000527CA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E7B07E1380A13000527CA7 /* Cocoa.framework */; };
 		23E7B0881380A13000527CA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E7B0861380A13000527CA7 /* InfoPlist.strings */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		235F3D971382D63B000A90A4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		2382587A13887A5B002D6B56 /* StatusBar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = StatusBar.rb; sourceTree = "<group>"; };
 		23D82A801382C40700A765C5 /* LinkControl.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = LinkControl.rb; sourceTree = "<group>"; };
 		23E7B07A1380A13000527CA7 /* KaPow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaPow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E7B07E1380A13000527CA7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -90,7 +88,6 @@
 				23E7B0901380A13100527CA7 /* Other Sources */,
 				23E7B0841380A13000527CA7 /* Supporting Files */,
 				23D82A801382C40700A765C5 /* LinkControl.rb */,
-				2382587A13887A5B002D6B56 /* StatusBar.rb */,
 			);
 			path = KaPow;
 			sourceTree = "<group>";
@@ -196,7 +193,6 @@
 				23D82A811382C40700A765C5 /* LinkControl.rb in Resources */,
 				235F3D981382D63B000A90A4 /* icon.png in Resources */,
 				23EC80F013831BD300E82720 /* system-icon.png in Resources */,
-				2382587B13887A5B002D6B56 /* StatusBar.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
