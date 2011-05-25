@@ -8,11 +8,12 @@
 require 'FileUtils'
 
 class AppDelegate
-  attr_accessor :window
+  attr_accessor :window, :logsWindow
   attr_accessor :mainMenu
   attr_accessor :browseButton, :saveButton, :urlButton, :restartButton
+  attr_accessor :openLogsButton
   attr_accessor :alwaysRestartCheckbox
-  attr_accessor :appNameField, :appPathField
+  attr_accessor :appNameField, :appPathField, :logTextField
   attr_accessor :appListTableView
 
   POWDIR = File.expand_path '~/.pow/'
@@ -25,9 +26,6 @@ class AppDelegate
     self.get_current_apps
     self.enable_fields
   end
-
-
-
 
   def browse(sender)
     dialog = NSOpenPanel.openPanel
@@ -278,6 +276,11 @@ class AppDelegate
     app = NSApplication.sharedApplication
     app.terminate(self)
   end
+
+  def open_logs_window(sender)
+    @logsWindow.isVisible = true
+  end
+
 end
 
 class Apps
