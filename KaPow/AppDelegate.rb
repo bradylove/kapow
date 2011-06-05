@@ -11,12 +11,15 @@ class AppDelegate
   attr_accessor :window, :logsWindow
   attr_accessor :mainMenu
   attr_accessor :browseButton, :saveButton, :urlButton, :restartButton
-  attr_accessor :openLogsButton
+  attr_accessor :logsssButton
   attr_accessor :alwaysRestartCheckbox
-  attr_accessor :appNameField, :appPathField, :logTextField
+  attr_accessor :appNameField, :appPathField, :logsTextField
   attr_accessor :appListTableView
 
+  attr_accessor :logData
+
   POWDIR = File.expand_path '~/.pow/'
+  DISPATCH_QUEUE = Dispatch::Queue.new("org.bradylove.kapow.com")
 
   def applicationDidFinishLaunching(a_notification)
     @window.isVisible = false
@@ -25,7 +28,11 @@ class AppDelegate
     
     self.get_current_apps
     self.enable_fields
+    self.load_logs
   end
+
+
+
 
   def browse(sender)
     dialog = NSOpenPanel.openPanel
@@ -277,10 +284,39 @@ class AppDelegate
     app.terminate(self)
   end
 
-  def open_logs_window(sender)
+  def open_the_logs(sender)
     @logsWindow.isVisible = true
   end
 
+  def load_logs
+    @logsTextField.insertText("Starting \r\r")
+
+    # DISPATCH_QUEUE.dispatch do
+    Dispatch::Queue.concurrent.async do
+      IO.popen("tail -f /Users/brady/Development/Blengine/log/development.log") do |streamer|
+        Dispatch::Queue.concurrent.sync do
+          while line = streamer.gets
+            @logsTextField.insertText line.to_s
+          end
+        end
+      end
+    end
+
+    
+    # Dispatch::Queue.concurrent.async do
+    #   IO.popen("tail -f /Users/brady/Development/Blengine/log/development.log") do |streamer|
+    #     while line = streamer.gets
+    #       Dispatch::Queue.concurrent.sync do
+    #         @logsTextField.insertText line.to_s
+    #       end
+    #     end
+    #   end
+    # end
+
+    # Dispatch::Queue.main do
+    #   @logsTextField.insertText("\r\r DONE \r\r")
+    # end
+  end
 end
 
 class Apps
