@@ -108,6 +108,7 @@ class AppDelegate
     @apps.delete_at(index)
 
     @appListTableView.reloadData
+    self.setup_menu
 
     self.clear_fields
   end

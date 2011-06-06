@@ -1,4 +1,4 @@
-h1. KaPow Version .10(alpha4)
+h1. KaPow Version .10(alpha5)
 
 !http://content.screencast.com/users/BLove/folders/Jing/media/3f17ca8c-ca9d-472d-a840-986948651250/00000010.png!
 !http://content.screencast.com/users/BLove/folders/Jing/media/42075110-953d-4fec-ae88-1e5abc8f82a9/00000008.png!
