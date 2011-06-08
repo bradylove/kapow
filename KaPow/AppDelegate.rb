@@ -28,7 +28,6 @@ class AppDelegate
     
     self.get_current_apps
     self.enable_fields
-    self.load_logs
   end
 
 
@@ -243,6 +242,13 @@ class AppDelegate
           sub_menu.addItem smi
 
           smi = NSMenuItem.new
+          smi.title = 'View Development Log'
+          smi.action = 'view_development_log:'
+          smi.representedObject = app.target
+          smi.target = self
+          sub_menu.addItem smi
+
+          smi = NSMenuItem.new
           smi.title = 'Restart App'
           smi.action = 'restart_server_from_menu:'
           smi.representedObject = app.target
@@ -284,16 +290,22 @@ class AppDelegate
     app.terminate(self)
   end
 
-  def open_the_logs(sender)
+  def view_development_log(sender)
+    self.load_logs(sender.representedObject.to_s)
+  end
+
+  def open_log_window
     @logsWindow.isVisible = true
   end
 
-  def load_logs
+  def load_logs(target)
+    log_path = target + "/log/development.log"
+    self.open_log_window
     @logsTextField.insertText("Starting \r\r")
 
     # DISPATCH_QUEUE.dispatch do
     Dispatch::Queue.concurrent.async do
-      IO.popen("tail -f /Users/brady/Development/Blengine/log/development.log") do |streamer|
+      IO.popen("tail -f #{log_path}") do |streamer|
         Dispatch::Queue.concurrent.sync do
           while line = streamer.gets
             @logsTextField.insertText line.to_s
